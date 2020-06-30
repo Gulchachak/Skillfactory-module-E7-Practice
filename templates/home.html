@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Advertisments</h1>
+{% for advert in adverts %}
+<article class="media content-section">
+	<div class="media-body">
+		<div class="article-metadata">
+			<a class="mr-1" href="{{ url_for('advert_by_id', advert_id=advert._id) }}">ID: {{ advert._id }}</a>
+		</div>
+		<p class="article-content">Text: {{ advert.text }}</p>
+		<p><a class="article-title" href="{{ url_for('tag_by_id', advert_id=advert._id) }}">Tags: {{ advert.tags }}</a></p>
+		<p><a class="article-title" href="{{ url_for('comment_by_id', advert_id=advert._id) }}">Comments: {{ advert.comments }}</a></p>
+	</div>
+</article>
+{% endfor %}
+{% endblock content %}
+

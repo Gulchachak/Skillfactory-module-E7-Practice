@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+	<form method="POST" action="{{ url_for('new_comment') }}">
+		<fieldset class="form-group">
+			<div class="form-group">
+				<label for="id">ID:</label>
+				<input class="form-control" type="text" name="id" id="id" required/>
+				<label for="text">Comment:</label>
+				<input class="form-control" name="comment" id="comment">
+			</div>
+		</fieldset>
+		<input class="btn btn-outline-info" type="submit" value="Submit" />
+	</form>
+</div>
+{% endblock content %}
+

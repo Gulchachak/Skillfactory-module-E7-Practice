@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<article class="media content-section">
+	<div class="media-body">
+		<p class="article-content">ID: {{ adverts._id }}</p>
+		<p class="article-content">Text: {{ adverts.text }}</p>
+		<p class="article-content">Tags: {{ adverts.tags }}</p>
+		<p class="article-content">Comments: {{ adverts.comments }}</p>
+	</div>
+</article>
+{% endblock content %}
+
